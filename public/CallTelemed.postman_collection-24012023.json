@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "6c8941ae-78ed-4f6d-ba56-9315094f0415",
+		"name": "CallTelemed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13284845"
+	},
+	"item": [
+		{
+			"name": "CreateMophToken",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mophvc.moph.go.th/mophvc/Token/CreateMophToken?UserID=10954@MophTelemed&Password=uMO0J/UAJp2SPZHfMf97muELjXem8/",
+					"protocol": "https",
+					"host": [
+						"mophvc",
+						"moph",
+						"go",
+						"th"
+					],
+					"path": [
+						"mophvc",
+						"Token",
+						"CreateMophToken"
+					],
+					"query": [
+						{
+							"key": "UserID",
+							"value": "10954@MophTelemed"
+						},
+						{
+							"key": "Password",
+							"value": "uMO0J/UAJp2SPZHfMf97muELjXem8/"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CallTelemed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDk1NEBNb3BoVGVsZW1lZCIsImVtYWlsIjoidU1PMEovVUFKcDJTUFpIZk1mOTdtdUVMalhlbTgvIiwiWG5hbWUiOiJldGFlIiwiUHJvamVjdCI6Ik1PUlBST01QIiwidXNlcmlkIjoiMTA5NTRATW9waFRlbGVtZWQiLCJzdGFmZiI6Ii0xIiwicmNwdGxjdCI6Ii0xIiwib3duZXIiOiLguYLguKPguIfguJ7guKLguLLguJrguLLguJrguKfguLLguKPguLTguJnguIrguLPguKPguLLguJoiLCJjb21wYW55IjoiaW5ldCDguJ7guLHguJLguJnguLLguYPguKvguYkiLCJleHBkIjoiMjAyMzAxMjQxNTAyNDUiLCJqdGkiOiJhMDM1MjRjMS01NzNkLTQ1NGMtOTk4OC1kMWI2OGFhOWJlNTciLCJuYmYiOjE2NzQ1MzI5NjUsImV4cCI6MTY3NDU0NzM2NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozNzIwNi8iLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjM3MjA2LyJ9.0T_ZD32L0jJHMk1u0cqAYIW4TllesIN_CzWd-v0zpv8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"pid\":\"1234567890123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mophvc.moph.go.th/mophvc/Msg/CallTelemed",
+					"protocol": "https",
+					"host": [
+						"mophvc",
+						"moph",
+						"go",
+						"th"
+					],
+					"path": [
+						"mophvc",
+						"Msg",
+						"CallTelemed"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
